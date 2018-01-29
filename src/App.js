@@ -1,9 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const App = () => (
+const App = props => (
     <div>
-        <h1>App</h1>
+        {
+            props.usersData
+            &&
+            props.usersData.map(user => (
+                <div
+                    key={`${user.name.first}-${user.name.last}`}
+                >
+                    {`${user.name.first} ${user.name.last}`}
+                </div>
+            ))
+        }
     </div>
 )
 
