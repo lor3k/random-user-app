@@ -1,7 +1,19 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const App = () => (
-    <div>App</div>
+    <div>
+        <h1>App</h1>
+    </div>
 )
 
-export default App
+const mapStateToProps = state => ({
+    usersData: state.users.data
+})
+
+const mapDispatchToProps = state => ({})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App)
