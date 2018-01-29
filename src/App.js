@@ -1,19 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import UsersList from './components/UsersList'
 
 const App = props => (
     <div>
-        {
-            props.usersData
-            &&
-            props.usersData.map(user => (
-                <div
-                    key={`${user.name.first}-${user.name.last}`}
-                >
-                    {`${user.name.first} ${user.name.last}`}
-                </div>
-            ))
-        }
+        <UsersList
+            usersData={props.usersData}
+        />
     </div>
 )
 
