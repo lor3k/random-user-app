@@ -1,18 +1,12 @@
 import React from 'react'
+import User from './User'
 
 const UsersList = props => (
-    <div>
+    <div className="list">
         {
             props.usersData
             &&
-            props.usersData.map(user => (
-                <div
-                    key={`${user.name.first}-${user.name.last}`}
-                    className="users"
-                >
-                    {`${user.name.first} ${user.name.last}`}
-                </div>
-            ))
+            props.usersData.map(user => <User user={user} />)
         }
     </div>
 )

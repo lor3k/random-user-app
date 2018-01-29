@@ -8,9 +8,14 @@
 	<title>React App</title>
 
 	<style>
-		.users{
+		.list {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.users {
 			font-family: 'Ubuntu', sans-serif;
-			font-size: 1em;
+			font-size: 1.1em;
 			text-align: center;
 			padding: 0.5em;
 			margin: 0.5em;
@@ -19,6 +24,18 @@
 			border: 1px solid black;
 			border-radius: 5px;
 			box-shadow: 0 0 10px grey;
+		}
+
+		a:link,
+		a:hover,
+		a:active,
+		a:visited {
+			color: orangered,
+			text-decoration: none;
+		}
+
+		img {
+			margin: 10px;
 		}
 	</style>
 </head>
